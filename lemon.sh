@@ -42,6 +42,9 @@ sudo cp squid.conf /etc/squid
 # restart squid service.
 sudo systemctl restart squid
 
+# Verify Squid Status
+sudo systemctl status squid
+
 # done
 echo"\e[33m╭━━━┳━━━┳━╮╱╭┳━━━╮╭╮"
 echo"\e[33m╰╮╭╮┃╭━╮┃┃╰╮┃┃╭━━╯┃┃"
