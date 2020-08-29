@@ -1,4 +1,12 @@
-echo "LemonProxies Script STARTED!"
+echo"\e[33m╭╮╱╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━┳━━━╮╭━━━╮╱╱╱╱╱╱╱╱╭╮"
+echo"\e[33m┃┃╱╱╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╮╭╮┃╭━╮┃┃╭━╮┃╱╱╱╱╱╱╱╭╯╰╮"
+echo"\e[33m┃┃╭━━┳╮╭┳━━┳━╮┃╰━╯┣━┳━━┳╮╭┳┳━━┳━━╮╱┃┃┃┃┃╱╰╯┃╰━━┳━━┳━┳┳━┻╮╭╯"
+echo"\e[33m┃┃┃┃━┫╰╯┃╭╮┃╭╮┫╭━━┫╭┫╭╮┣╋╋╋┫┃━┫━━┫╱┃┃┃┃┃╱╭╮╰━━╮┃╭━┫╭╋┫╭╮┃┃"
+echo"\e[33m┃╰┫┃━┫┃┃┃╰╯┃┃┃┃┃╱╱┃┃┃╰╯┣╋╋┫┃┃━╋━━┃╭╯╰╯┃╰━╯┃┃╰━╯┃╰━┫┃┃┃╰╯┃╰╮"
+echo"\e[33m╰━┻━━┻┻┻┻━━┻╯╰┻╯╱╱╰╯╰━━┻╯╰┻┻━━┻━━╯╰━━━┻━━━╯╰━━━┻━━┻╯╰┫╭━┻━╯"
+echo"\e[33m╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃"
+echo"\e[33m╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯"
+
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
 
@@ -19,12 +27,15 @@ sudo touch /etc/squid/passwd
 sudo chown proxy /etc/squid/passwd
 
 # create user for proxy service.
-# sudo htpasswd /etc/squid/passwd-PROXY_USER
 
 /usr/bin/htpasswd -b -c /etc/squid/passwd lemonproxies premium
 
-echo "LemonProxies user created !"
-
+echo"\e[33m╭╮╱╭┳━━━┳━━━┳━━━╮╭━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━╮╭╮"
+echo"\e[33m┃┃╱┃┃╭━╮┃╭━━┫╭━╮┃┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭╮╭╮┃╭━━┻╮╭╮┃┃┃"
+echo"\e[33m┃┃╱┃┃╰━━┫╰━━┫╰━╯┃┃┃╱╰┫╰━╯┃╰━━┫┃╱┃┣╯┃┃╰┫╰━━╮┃┃┃┃┃┃"
+echo"\e[33m┃┃╱┃┣━━╮┃╭━━┫╭╮╭╯┃┃╱╭┫╭╮╭┫╭━━┫╰━╯┃╱┃┃╱┃╭━━╯┃┃┃┃╰╯"
+echo"\e[33m┃╰━╯┃╰━╯┃╰━━┫┃┃╰╮┃╰━╯┃┃┃╰┫╰━━┫╭━╮┃╱┃┃╱┃╰━━┳╯╰╯┃╭╮"
+echo"\e[33m╰━━━┻━━━┻━━━┻╯╰━╯╰━━━┻╯╰━┻━━━┻╯╱╰╯╱╰╯╱╰━━━┻━━━╯╰╯"
 # replace old squid.conf with new conf. file.
 sudo cp squid.conf /etc/squid
 
@@ -32,4 +43,9 @@ sudo cp squid.conf /etc/squid
 sudo systemctl restart squid
 
 # done
-echo "LemonProxies Script DONE !"
+echo"\e[33m╭━━━┳━━━┳━╮╱╭┳━━━╮╭╮"
+echo"\e[33m╰╮╭╮┃╭━╮┃┃╰╮┃┃╭━━╯┃┃"
+echo"\e[33m╱┃┃┃┃┃╱┃┃╭╮╰╯┃╰━━╮┃┃"
+echo"\e[33m╱┃┃┃┃┃╱┃┃┃╰╮┃┃╭━━╯╰╯"
+echo"\e[33m╭╯╰╯┃╰━╯┃┃╱┃┃┃╰━━╮╭╮"
+echo"\e[33m╰━━━┻━━━┻╯╱╰━┻━━━╯╰╯"
