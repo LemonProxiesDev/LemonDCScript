@@ -1,5 +1,5 @@
-# squid-proxy
-This is an automatic script to install Squid-proxy with basic authentication for Linux Ubuntu.
+# LemonProxies DC Script
+This is an automatic script to install Squid-proxy with basic authentication for Linux Ubuntu , designed for LemonProxies .
 ## Installation
 1. Download or clone this repo.
     ```bash
