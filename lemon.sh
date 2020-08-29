@@ -1,3 +1,4 @@
+echo "LemonProxies Script STARTED!"
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
 
@@ -30,5 +31,5 @@ sudo cp squid.conf /etc/squid
 # restart squid service.
 sudo systemctl restart squid
 
-# done.
- echo "LemonProxies Script DONE !"
+# done
+echo "LemonProxies Script DONE !"
