@@ -1,14 +1,14 @@
 #!/bin/bash
-# Get Datacenter IP ()
-ip=$wget -O - -q https://icanhazip.com/
+# Get Datacenter IP
+ip=$(wget -O - -q https://icanhazip.com/)
 # Get Datacenter Port ( Default )
 port=3128
 # Get Datacenter username ( Default )
 user=lemonproxies
 # Genarate Random psw
-passw=$pwgen -A -0 -s  1 4
+passw=$(pwgen -A -0 -s  1 4)
 # Get Datacenter password
-passw1=${passw}
+passw1=$(echo"{passw}")
 
 echo"╭╮╱╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━┳━━━╮╭━━━╮╱╱╱╱╱╱╱╱╭╮"
 echo"┃┃╱╱╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╮╭╮┃╭━╮┃┃╭━╮┃╱╱╱╱╱╱╱╭╯╰╮"
@@ -43,7 +43,7 @@ sudo chown proxy /etc/squid/passwd
 
 # create user for proxy service.
 
-/usr/bin/htpasswd -b -c /etc/squid/passwd ${user} ${passw}
+/usr/bin/htpasswd -b -c /etc/squid/passwd ${user} "${passw}"
 
 echo"╭╮╱╭┳━━━┳━━━┳━━━╮╭━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━╮╭╮"
 echo"┃┃╱┃┃╭━╮┃╭━━┫╭━╮┃┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭╮╭╮┃╭━━┻╮╭╮┃┃┃"
