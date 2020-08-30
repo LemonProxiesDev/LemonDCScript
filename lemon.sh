@@ -1,6 +1,4 @@
 #!/bin/bash
-YELLOW='\033[1;33m'
-GREEN='\033[0;32m'
 # Get Datacenter IP ()
 ip=$(wget -O - -q https://icanhazip.com/)
 # Get Datacenter Port ( Default )
@@ -13,7 +11,7 @@ passw=premium
 # Get Datacenter password
 #passw1=$(echo"{passw}")
 
-echo"${YELLOW}LemonProxies DC Script Started !"
+echo"LemonProxies DC Script Started !"
 
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
@@ -39,9 +37,9 @@ sudo chown proxy /etc/squid/passwd
 
 # create user for proxy service.
 
-/usr/bin/htpasswd -b -c /etc/squid/passwd ${user} "${passw}"
+/usr/bin/htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 
-echo"${YELLOW}User Created !"
+echo"User Created !"
 
 # replace old squid.conf with new conf. file.
 sudo cp squid.conf /etc/squid
@@ -53,5 +51,5 @@ sudo systemctl restart squid
 sudo systemctl status squid
 
 # done
-echo"${YELLOW}Done !"
-echo"${GREEN}Your Proxy is : ${GREEN}${ip}:${port}:${user}:${passw}"
+echo"Done !"
+echo"Your Proxy is : ${ip}:${port}:${user}:${passw}"
