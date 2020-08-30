@@ -1,7 +1,19 @@
+#!/bin/bash
+# Get Datacenter IP
+ip=wget -O - -q https://icanhazip.com/
+# Get Datacenter Port ( Default )
+port=3128
+# Get Datacenter username ( Default )
+user=lemonproxies
+# Genarate Random psw
+passw=pwgen -A -0 -s  1 4
+# Get Datacenter password
+passw1=${passw}
+
 echo"╭╮╱╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━┳━━━╮╭━━━╮╱╱╱╱╱╱╱╱╭╮"
 echo"┃┃╱╱╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╮╭╮┃╭━╮┃┃╭━╮┃╱╱╱╱╱╱╱╭╯╰╮"
 echo"┃┃╭━━┳╮╭┳━━┳━╮┃╰━╯┣━┳━━┳╮╭┳┳━━┳━━╮╱┃┃┃┃┃╱╰╯┃╰━━┳━━┳━┳┳━┻╮╭╯"
-echo"┃┃┃┃━┫╰╯┃╭╮┃╭╮┫╭━━┫╭┫╭╮┣╋╋╋┫┃━┫━━┫╱┃┃┃┃┃╱╭╮╰━━╮┃╭━┫╭╋┫╭╮┃┃"
+echo"┃┃┃┃━┫╰╯┃╭╮┃╭╮┫╭━━┫╭┫╭╮┣╋╋╋┫┃━┫━━┫╱┃┃┃┃┃╱╭╮╰━━╮┃╭━┫╭╋┫╭╮┃┃"      
 echo"┃╰┫┃━┫┃┃┃╰╯┃┃┃┃┃╱╱┃┃┃╰╯┣╋╋┫┃┃━╋━━┃╭╯╰╯┃╰━╯┃┃╰━╯┃╰━┫┃┃┃╰╯┃╰╮"
 echo"╰━┻━━┻┻┻┻━━┻╯╰┻╯╱╱╰╯╰━━┻╯╰┻┻━━┻━━╯╰━━━┻━━━╯╰━━━┻━━┻╯╰┫╭━┻━╯"
 echo"╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃"
@@ -20,6 +32,9 @@ sudo systemctl enable squid
 # install apache utils.
 sudo apt install apache2-utils -y
 
+# install psw genarator.
+sudo apt-get install -y pwgen
+
 # create a passwd file in a same dir. to squid.conf.
 sudo touch /etc/squid/passwd
 
@@ -28,7 +43,7 @@ sudo chown proxy /etc/squid/passwd
 
 # create user for proxy service.
 
-/usr/bin/htpasswd -b -c /etc/squid/passwd lemonproxies premium
+/usr/bin/htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 
 echo"╭╮╱╭┳━━━┳━━━┳━━━╮╭━━━┳━━━┳━━━┳━━━┳━━━━┳━━━┳━━━╮╭╮"
 echo"┃┃╱┃┃╭━╮┃╭━━┫╭━╮┃┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭╮╭╮┃╭━━┻╮╭╮┃┃┃"
@@ -52,3 +67,4 @@ echo"╱┃┃┃┃┃╱┃┃╭╮╰╯┃╰━━╮┃┃"
 echo"╱┃┃┃┃┃╱┃┃┃╰╮┃┃╭━━╯╰╯"
 echo"╭╯╰╯┃╰━╯┃┃╱┃┃┃╰━━╮╭╮"
 echo"╰━━━┻━━━┻╯╱╰━┻━━━╯╰╯"
+echo"echo "Your Proxy is : ${ip}:${port}:${user}:${passw1}"
