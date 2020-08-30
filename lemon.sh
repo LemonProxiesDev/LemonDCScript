@@ -1,12 +1,12 @@
 #!/bin/bash
 # Get Datacenter IP ()
-ip=wget -O - -q https://icanhazip.com/
+ip=$wget -O - -q https://icanhazip.com/
 # Get Datacenter Port ( Default )
 port=3128
 # Get Datacenter username ( Default )
 user=lemonproxies
 # Genarate Random psw
-passw=pwgen -A -0 -s  1 4
+passw=$pwgen -A -0 -s  1 4
 # Get Datacenter password
 passw1=${passw}
 
@@ -67,4 +67,4 @@ echo"╱┃┃┃┃┃╱┃┃╭╮╰╯┃╰━━╮┃┃"
 echo"╱┃┃┃┃┃╱┃┃┃╰╮┃┃╭━━╯╰╯"
 echo"╭╯╰╯┃╰━╯┃┃╱┃┃┃╰━━╮╭╮"
 echo"╰━━━┻━━━┻╯╱╰━┻━━━╯╰╯"
-echo"echo "Your Proxy is : ${ip}:${port}:${user}:${passw1}"
+echo"Your Proxy is : ${ip}:${port}:${user}:${passw1}"
