@@ -38,7 +38,7 @@ sudo chown proxy /etc/squid/passwd
 # create user for proxy service.
 
 #/usr/bin/htpasswd -b -c /etc/squid/passwd lemonproxies premium
-htpasswd -b -c /etc/squid/passwd $user $passw
+sudo htpasswd -b -c /etc/squid/passwd $user $passw
 
 echo"User Created !"
 
