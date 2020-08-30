@@ -1,5 +1,5 @@
 #!/bin/bash
-# Get Datacenter IP
+# Get Datacenter IP ()
 ip=wget -O - -q https://icanhazip.com/
 # Get Datacenter Port ( Default )
 port=3128
