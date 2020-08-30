@@ -35,7 +35,7 @@ echo -e "\e[1;93mApache2 INSTALLED! \e[0m"
 # install psw genarator.
 sudo apt-get install -y pwgen
 
-echo -e "\e[1;93mP INSTALLED! \e[0m"
+echo -e "\e[1;93mPasswordGen INSTALLED! \e[0m"
 
 # create a passwd file in a same dir. to squid.conf.
 sudo touch /etc/squid/passwd
