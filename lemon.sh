@@ -5,9 +5,9 @@ ip=$(wget -O - -q https://icanhazip.com/)
 port=3128
 # Get Datacenter username ( Default )
 user=lemonproxies
-passw=premium
+#passw=premium
 # Genarate Random psw
-#passw=$(pwgen -A -0 -s  1 4)
+passw=$(pwgen -A -0 -s  1 4)
 # Get Datacenter password
 #passw1=$(echo"{passw}")
 
@@ -33,7 +33,7 @@ sudo apt install apache2-utils -y
 echo -e "\e[1;93mApache2 INSTALLED! \e[0m"
 
 # install psw genarator.
-#sudo apt-get install -y pwgen
+sudo apt-get install -y pwgen
 
 # create a passwd file in a same dir. to squid.conf.
 sudo touch /etc/squid/passwd
