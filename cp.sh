@@ -1,4 +1,4 @@
-#!/bin/bash^M
+#!/bin/bash
 # Get Datacenter IP ()^M
 ip=$(wget -O - -q https://icanhazip.com/)^M
 
