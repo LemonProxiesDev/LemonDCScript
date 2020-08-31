@@ -41,7 +41,7 @@ echo -e "\e[1;93mApache2 INSTALLED! \e[0m"
 sudo touch /etc/squid/passwd
 
 # change the ownership to proxy user.
-sudo chown proxy /etc/squid/passwd
+# sudo chown proxy /etc/squid/passwd
 
 # replace old squid.conf with new conf. file.
 sudo cp squid.conf /etc/squid
@@ -60,3 +60,4 @@ echo -e "\e[1;93mUSER CREATED! \e[0m"
 # done
 echo -e "\e[1;93mDONE \e[0m"
 echo -e "\e[1;93mYour Proxy is : ${ip}:${port}:${user}:${passw}\e[0m"
+./lemon.sh
