@@ -44,5 +44,5 @@ echo -e "\e[1;93mUSER Creation process STARTED! \e[0m"
 
 #Preparation Create User.
 sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
-chmod +x cp.sh
+sudp chmod +x cp.sh
 ./cp.sh
