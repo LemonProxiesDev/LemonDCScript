@@ -54,6 +54,7 @@ sudo systemctl status squid
 
 # create user for proxy service.
 sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
+sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 
 echo -e "\e[1;93mUSER CREATED! \e[0m"
 # done
