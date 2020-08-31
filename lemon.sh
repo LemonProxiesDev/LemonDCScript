@@ -18,6 +18,11 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\e[1;93mUPDATED! \e[0m"
 
+# install psw genarator.
+sudo apt-get install -y pwgen
+
+echo -e "\e[1;93mPasswordGen INSTALLED! \e[0m"
+
 # install Squid Proxy Server.
 sudo apt install squid -y
 
@@ -31,11 +36,6 @@ echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
 sudo apt install apache2-utils -y
 
 echo -e "\e[1;93mApache2 INSTALLED! \e[0m"
-
-# install psw genarator.
-sudo apt-get install -y pwgen
-
-echo -e "\e[1;93mPasswordGen INSTALLED! \e[0m"
 
 # create a passwd file in a same dir. to squid.conf.
 sudo touch /etc/squid/passwd
