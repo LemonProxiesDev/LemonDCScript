@@ -54,10 +54,9 @@ sudo systemctl status squid
 
 # create user for proxy service.
 sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
-sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 
+./cp.sh
 echo -e "\e[1;93mUSER CREATED! \e[0m"
 # done
 echo -e "\e[1;93mDONE \e[0m"
 echo -e "\e[1;93mYour Proxy is : ${ip}:${port}:${user}:${passw}\e[0m"
-./lemon.sh
