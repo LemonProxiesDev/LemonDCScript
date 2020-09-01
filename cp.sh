@@ -27,7 +27,7 @@ message="$@"
 msg_content=\"$message\"
 
 ## discord webhook
-url='https://replace-your-full-discord-webhoook-url-here'
+url='https://discordapp.com/api/webhooks/750307253541797960/8GkGqqlZhfUfJH-PthUq7LraaCYoMYknP9iFMYBRiM0iyATYonATNsDqfGVN7qJ1HvKf'
 curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
 ./cp.sh "Your Proxy is : ${ip}:${port}:${user}:${passw}"
 # -X POST - use POST method.
