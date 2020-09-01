@@ -31,5 +31,5 @@ export WEBHOOK_URL="https://discordapp.com/api/webhooks/750307253541797960/8GkGq
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"username": "test", "content": "Your Proxy is :" + $ip:$port:$user:$passw"}'
-  -d '{"username": "test", "content": "Your Proxy is :"} ${ip}:${port}:${user}:${passw}' ${ip}:${port}:${user}:${passw}
+  #-d '{"username": "test", "content": "Your Proxy is :"} ${ip}:${port}:${user}:${passw}' ${ip}:${port}:${user}:${passw}
   $WEBHOOK_URL
