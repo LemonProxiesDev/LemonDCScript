@@ -11,7 +11,7 @@ user=lemonproxies
 # Genarate Random psw
 passw=$(pwgen -A 4 1)
 
-sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}^M
+sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 echo -e "\e[1;93mUSER CREATED! \e[0m"
 
 echo -e "\e[1;93mDONE ! \e[0m"
