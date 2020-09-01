@@ -40,6 +40,8 @@ sudo systemctl restart squid
 # Verify Squid Status
 sudo systemctl status squid
 
+^C
+
 echo -e "\e[1;93mUSER Creation process STARTED! \e[0m"
 
 #Preparation Create User.
