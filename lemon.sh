@@ -48,3 +48,5 @@ echo -e "\e[1;93mUSER Creation process STARTED! \e[0m"
 sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
 sudo chmod +x cp.sh
 ./cp.sh
+
+python3 proxy_gen.py
