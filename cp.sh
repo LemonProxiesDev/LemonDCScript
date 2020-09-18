@@ -3,7 +3,7 @@
 ip=$(wget -O - -q -4 https://icanhazip.com/)
 
 # Get Datacenter Port ( Default )^M
-port=3128
+port=8844
 
 # Get Datacenter username ( Default )
 user=lemonproxies
