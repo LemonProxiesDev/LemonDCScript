@@ -8,7 +8,7 @@ echo -e "\e[1;93mUpdating Servers ! \e[0m"
 
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
-sudo apt install build-essentials
+sudo apt install build-essential
 
 # Installing Squid
 
