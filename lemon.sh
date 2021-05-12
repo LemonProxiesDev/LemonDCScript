@@ -50,14 +50,39 @@ sudo wget http://www.squid-cache.org/Versions/v4/squid-4.14.tar.gz
 
 sudo tar xvf squid-4.14.tar.gz
 
+echo -e "\e[1;93mCustom Squid - 30% \e[0m"
 
-^C
+sudo cp PortCfg.h squid-4.14/src/anyp
 
-echo -e "\e[1;93mUSER Creation process STARTED! \e[0m"
+cd
 
-#Preparation Create User.
-sudo htpasswd -b -c /etc/squid/passwd ${user} ${passw}
+sudo apt install build-essentials
 
-sudo chmod +x cp.sh
+echo -e "\e[1;93mCustom Squid - 60% \e[0m"
 
-./cp.sh
+cd squid-4.14 
+
+./configure --prefix=/usr \
+--localstatedir=/var \
+--libexecdir=${prefix}/lib/squid \
+--datadir=${prefix}/share/squid \
+--sysconfdir=/etc/squid \
+--with-default-user=proxy \
+--with-logdir=/var/log/squid \
+--with-pidfile=/var/run/squid.pid
+
+echo -e "\e[1;93mCustom Squid - 80% \e[0m"
+
+sudo make 
+
+sudo make install
+
+echo -e "\e[1;93mCustom Squid - 90% \e[0m"
+
+# restart squid service.
+sudo systemctl restart squid
+
+# Verify Squid Status
+sudo systemctl status squid
+
+echo -e "\e[1;93mCustom Squid - 100% \e[0m"
