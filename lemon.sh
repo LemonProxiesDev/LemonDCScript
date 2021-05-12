@@ -5,6 +5,8 @@ echo -e "\e[1;93mUpdating Servers ! \e[0m"
 
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
+sudo apt install jq
+sudo apt install build-essentials
 
 # Installing Squid
 
@@ -56,8 +58,6 @@ sudo cp PortCfg.h squid-4.14/src/anyp
 
 cd
 
-sudo apt install build-essentials
-
 echo -e "\e[1;93mCustom Squid - 60% \e[0m"
 
 cd squid-4.14 
@@ -84,5 +84,20 @@ sudo systemctl restart squid
 
 # Verify Squid Status
 sudo systemctl status squid
+
+cd && chmod +x discord.sh
+
+info=$(hostname)
+
+./discord.sh \
+  --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" \
+  --username "TheDuke - logs" \
+  --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" \
+  --title "The AU/SG Sauce Has been installed" \
+  --description "> Server : ${info}" \
+  --color "0xf5f90b" \\
+  --footer "Debug System by TheDuke" \
+  --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" \
+  --timestamp
 
 echo -e "\e[1;93mCustom Squid - 100% \e[0m"
