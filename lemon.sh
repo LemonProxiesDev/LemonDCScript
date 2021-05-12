@@ -42,9 +42,9 @@ echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
 
 echo -e "\e[1;93mInstalling Custom Squid by LemonProxies! \e[0m"
 
-sudo wget http://www.squid-cache.org/Versions/v4/squid-4.14.tar.gz
+wget http://www.squid-cache.org/Versions/v4/squid-4.14.tar.gz
 
-sudo tar xvf squid-4.14.tar.gz
+tar xvf squid-4.14.tar.gz
 
 echo -e "\e[1;93mCustom Squid - 30% \e[0m"
 
