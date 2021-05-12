@@ -54,7 +54,7 @@ cd
 
 echo -e "\e[1;93mCustom Squid - 60% \e[0m"
 
-cd squid-4.14 
+cd LemonDCScript/squid-4.14/ 
 
 ./configure --prefix=/usr \
 --localstatedir=/var \
@@ -75,7 +75,7 @@ echo -e "\e[1;93mCustom Squid - 90% \e[0m"
 
 # restart squid service.
 
-cd && chmod +x discord.sh
+cd && cd LemonDCScript && chmod +x discord.sh
 
 info=$(hostname)
 
