@@ -38,9 +38,6 @@ sudo touch /etc/squid/passwd
 # replace old squid.conf with new conf. file.
 sudo cp squid.conf /etc/squid
 
-sudo systemctl restart squid && sudo systemctl status squid
-^C
-
 echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
 
 echo -e "\e[1;93mInstalling Custom Squid by LemonProxies! \e[0m"
@@ -77,8 +74,6 @@ sudo make install
 echo -e "\e[1;93mCustom Squid - 90% \e[0m"
 
 # restart squid service.
-sudo systemctl restart squid && sudo systemctl status squid
-^C
 
 cd && chmod +x discord.sh
 
@@ -96,3 +91,4 @@ info=$(hostname)
   --timestamp
 
 echo -e "\e[1;93mCustom Squid - 100% \e[0m"
+sudo systemctl restart squid && sudo systemctl status squid
