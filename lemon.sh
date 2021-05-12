@@ -1,5 +1,7 @@
 #!/bin/bash
 echo -e "\e[1;93mLemonProxies DC Script Started! \e[0m"
+chmod +x discord.sh
+info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "LemonProxies DC Script Started on ${info}" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
 
 echo -e "\e[1;93mUpdating Servers ! \e[0m"
 
@@ -12,6 +14,7 @@ sudo apt install build-essentials
 
 
 echo -e "\e[1;93mServers is Now Updated ! \e[0m"
+info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "Server ${info} in now Updated !" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
 
 echo -e "\e[1;93minstalling Normal Squid ! \e[0m"
 # install psw genarator.
@@ -39,7 +42,8 @@ sudo touch /etc/squid/passwd
 sudo cp squid.conf /etc/squid
 
 echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
-
+info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "Squid is now Installed on ${info}" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
+info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "Setting up the right Sauce for SG/AU on ${info}" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
 echo -e "\e[1;93mInstalling Custom Squid by LemonProxies! \e[0m"
 
 wget http://www.squid-cache.org/Versions/v4/squid-4.14.tar.gz
@@ -77,18 +81,8 @@ echo -e "\e[1;93mCustom Squid - 90% \e[0m"
 
 cd && cd LemonDCScript && chmod +x discord.sh
 
-info=$(hostname)
+info=$(hostname) && ip=$(wget -O - -q -4 https://icanhazip.com/) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "LemonProxies Sauce has been Successfully Installed !" --description " > Server : ${info}\n\n> IP: ${ip}" --color "0xf5f90b" --thumbnail "https://sistema.srl/media/zoo/images/Server-600_7c031b2b27cc40c37f48944d96cbce29.gif"  --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
 
-./discord.sh \
-  --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" \
-  --username "TheDuke - logs" \
-  --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" \
-  --title "The AU/SG Sauce Has been installed" \
-  --description "> Server : ${info}" \
-  --color "0xf5f90b" \\
-  --footer "Debug System by TheDuke" \
-  --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" \
-  --timestamp
 
 echo -e "\e[1;93mCustom Squid - 100% \e[0m"
 sudo systemctl restart squid && sudo systemctl status squid
