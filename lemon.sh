@@ -44,6 +44,8 @@ sudo systemctl restart squid
 # Verify Squid Status
 sudo systemctl status squid
 
+^C
+
 echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
 
 echo -e "\e[1;93mInstalling Custom Squid by LemonProxies! \e[0m"
@@ -84,6 +86,8 @@ sudo systemctl restart squid
 
 # Verify Squid Status
 sudo systemctl status squid
+
+^C
 
 cd && chmod +x discord.sh
 
