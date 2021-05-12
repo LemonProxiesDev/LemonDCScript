@@ -1,11 +1,17 @@
 #!/bin/bash
 echo -e "\e[1;93mLemonProxies DC Script Started! \e[0m"
 
+echo -e "\e[1;93mUpdating Servers ! \e[0m"
+
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
 
-echo -e "\e[1;93mUPDATED! \e[0m"
+# Installing Squid
 
+
+echo -e "\e[1;93mServers is Now Updated ! \e[0m"
+
+echo -e "\e[1;93minstalling Normal Squid ! \e[0m"
 # install psw genarator.
 sudo apt-get install -y pwgen
 
@@ -18,12 +24,8 @@ sudo apt install squid -y
 sudo systemctl start squid
 sudo systemctl enable squid
 
-echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
-
 # install apache utils.
 sudo apt install apache2-utils -y
-
-echo -e "\e[1;93mApache2 INSTALLED! \e[0m"
 
 # create a passwd file in a same dir. to squid.conf.
 sudo touch /etc/squid/passwd
@@ -39,6 +41,15 @@ sudo systemctl restart squid
 
 # Verify Squid Status
 sudo systemctl status squid
+
+echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
+
+echo -e "\e[1;93mInstalling Custom Squid by LemonProxies! \e[0m"
+
+sudo wget http://www.squid-cache.org/Versions/v4/squid-4.14.tar.gz
+
+sudo tar xvf squid-4.14.tar.gz
+
 
 ^C
 
