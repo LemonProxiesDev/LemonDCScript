@@ -1,5 +1,6 @@
 #!/bin/bash
 echo -e "\e[1;93mLemonProxies DC Script Started! \e[0m"
+sudo apt install jq
 chmod +x discord.sh
 info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "LemonProxies DC Script Started on ${info}" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
 
@@ -7,7 +8,6 @@ echo -e "\e[1;93mUpdating Servers ! \e[0m"
 
 # update package list and upgrade new versions of packages existing on the machine.
 sudo apt update && sudo apt upgrade -y
-sudo apt install jq
 sudo apt install build-essentials
 
 # Installing Squid
