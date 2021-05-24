@@ -40,6 +40,7 @@ sudo touch /etc/squid/passwd
 
 # replace old squid.conf with new conf. file.
 sudo cp squid.conf /etc/squid
+sudo cp banned.txt /etc/squid
 
 echo -e "\e[1;93mSquidService INSTALLED! \e[0m"
 info=$(hostname) && ./discord.sh --webhook-url="https://discord.com/api/webhooks/842161142687203379/NRMLHXni1nk7144WK4Ou12rkjqFKPu32Wb7OUo8SNF2pw-tC8f9dpPDDAvve5EOINqZU" --username "TheDuke - logs" --avatar "https://cdn.discordapp.com/attachments/748529672589017119/838760716524978186/LemonProxies-01.png" --title "Squid is now Installed on ${info}" --color "0xffa500" --footer "Debug System by TheDuke" --footer-icon "https://cdn.discordapp.com/attachments/774306541934215180/839872064646676500/image0.gif" --timestamp
