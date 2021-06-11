@@ -75,7 +75,7 @@ extern AnyP::PortCfgPointer FtpPortList;
 
 #if !defined(MAXTCPLISTENPORTS)
 // Max number of TCP listening ports
-#define MAXTCPLISTENPORTS 5000
+#define MAXTCPLISTENPORTS 55000
 #endif
 
 // TODO: kill this global array. Need to check performance of array vs list though.
